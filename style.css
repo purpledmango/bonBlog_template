@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
 :root {
     font-size: 62.3%;
+
     /* COLORS */
     --body-color: #ffffff;
     --border-color: #bbb2b5;
@@ -108,7 +109,6 @@ nav{
 } 
 
 .menu__items a {
-    text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
     display: inline-block;
@@ -176,6 +176,7 @@ nav{
     height: auto;
     /* margin: auto;   */
     border-radius: 0.8rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -259,16 +260,13 @@ nav{
 }
 
 .banner {
-    height: 30rem;
     background: #ffd7d1;
 }
 
 .footer {
-    padding: 10px;
-    /* margin-bottom: auto; */
-    display: block;
+    padding-top: 12rem;
     margin: auto;
-    background: var(--nav-color);
+    background: var(--body-color);
 }
 
 .social__media {
@@ -317,8 +315,8 @@ nav{
 
 .post__banner__img{
     flex: none;
-    min-width:100%;
-    min-height:100%;
+    max-width:100%;
+    max-height:100%;
 }
 
 
@@ -328,26 +326,60 @@ nav{
 }
 
 
+.author{
+    display: block;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    grid-template-columns: repeat(1fr, 1fr);
+    background: var(--body-color);
 
 
 
+}
+
+.profile__image{
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 15px solid var(--nav-color);
+    max-width: 9rem;
+    max-height: 9rem;
+}
+
+.author__text{
+    padding: 1.5rem;
+    margin: auto;
+}
+/* *********************************************************************** */
+
+/* Desktop View */
 
 
-
-
-
-
-
-
-
-
-
+/* D---------------------------------------DESKTOP VIEW-------------------------------------- */
 
 @media screen and (min-width: 566px) {
     .post__gallery {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 1fr);
     }
+
+    .post__title{
+        font-size: 1.32rem;
+    }
+
+    .post__banner__img{
+        display: flex;
+        min-width:100%;
+        min-height:100%;
 }
+
+    .author{
+        margin: auto;
+        width: 124rem;
+    }
+
+}
+
 
 @media screen and (min-width: 920px) {
     /* Navbar */
@@ -391,7 +423,7 @@ nav{
         font-size: 5rem;
     } */
     .post__gallery {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         margin: 2rem;
     }
     .gallery__item {
@@ -426,7 +458,8 @@ nav{
     .footer__info{
         width: 50%;
         margin: auto;
-        padding: 0;
+        padding: 0.8rem;
+
     }
     .post__area{
         margin: auto;
@@ -437,7 +470,11 @@ nav{
         font-weight: 600;
     }
     .tags{
+        padding-top: 2rem;
        font-size: 1.8rem;
+       text-decoration: underline;
+       text-decoration-color: #ccebe6;
+       text-decoration-thickness: 10px;
     }
     .date__posted{
         font-size: 1.8rem;
@@ -447,6 +484,11 @@ nav{
     }
     .empty__space{
         height: 10rem;
+    }
+
+    .author{
+        margin: auto;
+        width: 80rem;
     }
 }
 
