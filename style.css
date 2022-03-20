@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
+:root {
+    font-size: 62.3%;
+    /* COLORS */
+    --body-color: #ffffff;
+    --border-color: #bbb2b5;
+    --nav-color: #ffffff;
+    --nav-text-color: #123d6a;
+    /* TYPOGRAPHY */
+    /* font-family: 'Jura', sans-serif; */
+    --font-size-normal: 1.5rem;
+    /* 'Nunito' */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: .2rem;
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-normal);
+    background: var(--body-color);
+}
+
+li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: unset;
+}
+
+/* For Larger Screen */
+
+@media screen and (min-width: 756px) {}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+nav{
+    background: #ccebe6;
+}
+
+.navbar {
+    font-family: 'Jura', sans-serif;
+    position: relative;
+    height: 60px;
+    padding: 10px;
+    display: grid;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.nav__logo {
+    padding-top: 13px;
+    display: block;
+    color: var(--nav-text-color);
+    float: left;
+    font-weight: 600;
+}
+
+.menu__border{
+    margin: 0 2rem;
+    color: #ffd7d1;
+}
+
+.mobile__search, .mobile__menu {
+    position: relative;
+    float: right;
+    top: 25%;
+    font-size: 3rem;
+}
+
+.mobile__search {
+    display: block;
+}
+
+.menu__list {
+    height: 100vh;
+    width: 100%;
+    /* position: fixed; */
+    z-index: 1;
+    list-style: none;
+    /* width: 100vw; */
+    background: #ffd7d1;
+    padding: 10px;
+    font-size: 2rem;
+    animation-duration: 0.4s;
+    animation-name: menu;
+    
+}
+
+@keyframes menu {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.menu__items {
+    padding-top: 4rem;
+    font-weight: 400;
+    text-align: center;
+    /* overflow-x: scroll; /* Must be 'scroll' not 'auto' */
+    /* -webkit-overflow-scrolling: touch; */
+} 
+
+.menu__items a {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    position: relative;
+    /* padding: 15px 20px; */
+}
+
+.menu__items a::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    background: #ffc200;
+    
+    width: 0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.menu__items a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.title {
+    padding-top: 2.2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+.title > div{
+    flex: none;
+}
+
+.side__title {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 2rem;
+    border-bottom: 2px solid#ffc200;
+    font-weight: 600;
+}
+
+.main__content {
+    display: grid;
+}
+
+.post__gallery {
+    display: grid;
+}
+
+.post__item, .side__post {
+    width: auto;
+    height: auto;
+    display: block;
+    padding: 0px 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.post__img, .side__post__img {
+    width: 100%;
+    height: auto;
+    /* margin: auto;   */
+    border-radius: 0.8rem;
+}
+
+
+.tags {
+    display: block;
+    color: #acacac;
+}
+
+.post__title, .side__post__title {
+    padding-top: 12px;
+    display: inline-block;
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+    font-weight: 100;
+
+}
+
+.post__title a {
+    /* text-transform: uppercase; */
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    position: relative;
+    /* padding: 15px 20px; */
+}
+
+.post__title a::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    background: #ffc200;
+    width: 0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.post__title a:hover::after {
+    text-decoration: underline;
+    left: 0;
+    width: 100%;
+}
+
+
+.side__post__title {
+    font-size: 1rem;
+}
+
+.side__content {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+}
+
+.mobile__paination {
+    padding-top: 5rem;
+    display: block;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.paination {
+    display: none;
+}
+
+.button {
+    font-family: "Jura";
+    display: block;
+    background-color: #fff06b;
+    width: 6rem;
+    margin: 0 auto 0 auto;
+    border-radius: .8rem;
+    padding: 2rem;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: #ffc200;
+}
+
+.banner {
+    height: 30rem;
+    background: #ffd7d1;
+}
+
+.footer {
+    padding: 10px;
+    /* margin-bottom: auto; */
+    display: block;
+    margin: auto;
+    background: var(--nav-color);
+}
+
+.social__media {
+    display: flex;
+    justify-content: space-around;
+    padding: 65px;
+    font-size: 2rem;
+}
+.footer__info{
+    width: 100%;
+    height: 25px;
+    margin: auto;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+
+}
+
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/* END HOMEPAGE */
+
+
+
+/* START POST PAGE */
+
+.post__area{
+    margin-top: 2rem;
+    padding: 30px 2rem 40px;
+    border: 0.2px solid #ffd7d1;
+}
+.post__heading{
+    font-family: "Jura";
+    font-size: 3rem;
+}
+.date__posted{
+    color: #898989;
+    font-size: 1.5rem;
+}
+
+.post__banner__img{
+    flex: none;
+    min-width:100%;
+    min-height:100%;
+}
+
+
+.content__area{
+    padding-top: 5rem;
+    font-size: 1.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 566px) {
+    .post__gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 920px) {
+    /* Navbar */
+    #menu-closed, #menu-opened {
+        display: none;
+    }
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .navbar {
+        grid-template-columns: repeat(auto);
+    }
+    .nav__logo {
+        padding-left: 4rem;
+    }
+    .menu__border {
+        margin: 0px 3.5rem;
+    }
+    #mobile-menu-list {
+        display: table;
+        font-family: "Jura";
+        margin: 0 auto;
+        padding: 15px 0;
+        height: 2px;
+        animation: none;
+        margin-right: auto;
+        background: #ccebe6;
+    }
+    .menu__items {
+        display: table-cell;
+        position: relative;
+        padding: 15px 0;
+    }
+    /* End navbar */
+    .main__content {
+        /* width: 100%; */
+        grid-template-columns: 3fr 0.7fr;
+    }
+    /* .title{
+        font-size: 5rem;
+    } */
+    .post__gallery {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 2rem;
+    }
+    .gallery__item {
+        padding: 0px 25px;
+    }
+    .side__content {
+        border-left: 2px black;
+    }
+    .mobile__paination {
+        display: none;
+    }
+    .paination {
+        padding-top: 5rem;
+        display: block;
+        padding-bottom: 5rem;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        padding-top: 12rem;
+    }
+    .button {
+        height: 2rem;
+    }
+
+    .social__media {
+        height: 20px;
+        width: 25rem;
+        margin: auto;
+        padding-left: 20rem;
+        font-size: 2rem;
+    }
+    .footer__info{
+        width: 50%;
+        margin: auto;
+        padding: 0;
+    }
+    .post__area{
+        margin: auto;
+        width: 120rem;
+    }
+    .post__heading{
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    .tags{
+       font-size: 1.8rem;
+    }
+    .date__posted{
+        font-size: 1.8rem;
+    }
+    .content__area{
+        font-size: 2.3rem;
+    }
+    .empty__space{
+        height: 10rem;
+    }
+}
+
