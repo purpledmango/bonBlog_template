@@ -1,57 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> bon Blog </title>
-
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-</head>
-
-<body>
-
-    <nav>
-        <div class="navbar">
-            <a class="nav__logo" href="#">
-                <h1>bon Blog</h1>
-            </a>
-
-            <div></div>
-            <!-- <a>
-                <i class='bx bx-search mobile__search'></i>
-            </a> -->
-
-            <!-- Mobile Menu Open and close -->
-            <a id="menu-closed" class="show">
-                <i class='bx bx-menu mobile__menu'></i>
-            </a>
-            <a id="menu-opened" class="hide">
-                <i class='bx bx-menu-alt-left mobile__menu'></i>
-            </a>
-            <!-- Mobile Menu End -->
-        </div>    
-        <!-- Menu list -->
-        <ul id="mobile-menu-list" class="menu__list hide">
-            <ul id="mobile-menu-list" class="menu__list hide">
-            <li class="menu__items">
-                <strong><a href= "/index.html">Home</a></strong>
-            </li>
-            <li class="menu__items">
-                <strong><a>Projects</a></strong>
-            </li>
-            <li class="menu__items">
-                <strong><a>Mustry</a></strong>
-            </li>
-            <li class="menu__items">
-                <strong><a href="/about.html">About</a></strong>
-            </li>
-        </ul>
-
-        
-    </nav>
+{% block content %}
     <hr class="menu__border">
 
     <div>
@@ -67,25 +16,4 @@
     </div>
 
 
-    <footer>
-        <div class="footer">
-            
-
-            <div class="social__media">
-                <a href="https://www.linkedin.com/in/nitish-kumar-chauhan-9b461b235/" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
-                <a href="https://twitter.com/mehreallynk" target="_blank"><i class='bx bxl-twitter'></i></a>
-                <a href="https://github.com/purpledmango" target="_blank"><i class='bx bxl-github'></i></i></a>
-            </div>
-
-            <div class="footer__info">
-                All rights reserverd by bonBlog
-                <strong>&#169;BonBlog  2022</strong>
-            </div>
-        </div>
-       
-    </footer>
-
-</body>
-    <script src="./main.js"></script>
-
-</html>
+{% endblock %}
